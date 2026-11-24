@@ -17,7 +17,10 @@ RUN addgroup --system --gid 10001 app && \
 # Instalar dependencias
 COPY requirements.txt .
 
-RUN python -m pip install --no-cache-dir -r requirements.txt
+RUN python -m pip install \
+    --no-cache-dir \
+    --require-hashes \
+    -r requirements.txt
 
 # Copiar aplicación
 COPY --chown=10001:10001 src/ ./src/
