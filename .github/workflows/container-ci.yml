@@ -107,6 +107,64 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
+
+      # ==========================================
+      # GENERACIÓN DE SBOM CON SYFT
+      # ==========================================
+
+      - name: Generate CycloneDX SBOM
+        id: sbom
+        uses: anchore/sbom-action@66cbf4bc1f1c0d2edc94016e65bc221b6bb0ad6c # v0.24.3
+        with:
+          image: ghcr.io/ferchu060100/tfm-supply-chain-security@${{ steps.build.outputs.digest }}
+          format: cyclonedx-json
+          output-file: sbom.cdx.json
+          syft-version: v1.57.2
+          upload-artifact: false
+          upload-release-assets: false
+          dependency-snapshot: false
+
+      # ==========================================
+      # VALIDACIÓN DEL SBOM
+      # ==========================================
+
+      - name: Validate SBOM
+        id: validate-sbom
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -s sbom.cdx.json
+
+          jq -e '
+            .bomFormat == "CycloneDX" and
+            (.components | type == "array")
+          ' sbom.cdx.json > /dev/null
+
+          COMPONENTS=$(jq '.components | length' sbom.cdx.json)
+          SBOM_SHA256=$(sha256sum sbom.cdx.json | awk '{print $1}')
+
+          {
+            echo "## SBOM CycloneDX"
+            echo ""
+            echo "- Format: CycloneDX JSON"
+            echo "- Components: ${COMPONENTS}"
+            echo "- SHA-256: ${SBOM_SHA256}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # ==========================================
+      # ALMACENAMIENTO DEL SBOM
+      # ==========================================
+
+      - name: Upload SBOM artifact
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: sbom-cyclonedx-${{ github.sha }}
+          path: sbom.cdx.json
+          if-no-files-found: error
+          retention-days: 30
+
+
       - name: Publish image digest
         env:
           IMAGE_DIGEST: ${{ steps.build.outputs.digest }}
