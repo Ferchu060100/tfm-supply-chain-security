@@ -1,0 +1,12 @@
+======================================
+PRUEBA NEGATIVA COSIGN
+IDENTIDAD NO AUTORIZADA
+======================================
+Error: no matching attestations: failed to verify certificate identity: no matching CertificateIdentity found, last error: expected SAN value "https://github.com/otro-proyecto/otro-repo/.github/workflows/container-ci.yml@refs/heads/main", got "https://github.com/Ferchu060100/tfm-supply-chain-security/.github/workflows/container-ci.yml@refs/heads/main"
+failed to verify certificate identity: no matching CertificateIdentity found, last error: expected SAN value "https://github.com/otro-proyecto/otro-repo/.github/workflows/container-ci.yml@refs/heads/main", got "https://github.com/Ferchu060100/tfm-supply-chain-security/.github/workflows/container-ci.yml@refs/heads/main"
+failed to verify certificate identity: no matching CertificateIdentity found, last error: expected SAN value "https://github.com/otro-proyecto/otro-repo/.github/workflows/container-ci.yml@refs/heads/main", got "https://github.com/Ferchu060100/tfm-supply-chain-security/.github/workflows/container-ci.yml@refs/heads/main"
+error during command execution: no matching attestations: failed to verify certificate identity: no matching CertificateIdentity found, last error: expected SAN value "https://github.com/otro-proyecto/otro-repo/.github/workflows/container-ci.yml@refs/heads/main", got "https://github.com/Ferchu060100/tfm-supply-chain-security/.github/workflows/container-ci.yml@refs/heads/main"
+failed to verify certificate identity: no matching CertificateIdentity found, last error: expected SAN value "https://github.com/otro-proyecto/otro-repo/.github/workflows/container-ci.yml@refs/heads/main", got "https://github.com/Ferchu060100/tfm-supply-chain-security/.github/workflows/container-ci.yml@refs/heads/main"
+failed to verify certificate identity: no matching CertificateIdentity found, last error: expected SAN value "https://github.com/otro-proyecto/otro-repo/.github/workflows/container-ci.yml@refs/heads/main", got "https://github.com/Ferchu060100/tfm-supply-chain-security/.github/workflows/container-ci.yml@refs/heads/main"
+
+PRUEBA SUPERADA: identidad incorrecta rechazada

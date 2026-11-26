@@ -1,0 +1,59 @@
+========================================
+TFM - SOFTWARE SUPPLY CHAIN SECURITY
+FASE 5 - VERIFICACION DE ATESTACIONES
+========================================
+
+Repositorio:
+Ferchu060100/tfm-supply-chain-security
+
+Commit:
+024a865
+
+Imagen:
+ghcr.io/ferchu060100/tfm-supply-chain-security
+
+Digest:
+sha256:fb2d7a17bd84d69f8c2aa2dfc845f58e590378effd5da522025df864de41ce93
+
+----------------------------------------
+VERIFICACION 1: SLSA PROVENANCE
+----------------------------------------
+
+Predicado:
+https://slsa.dev/provenance/v1
+
+Resultado:
+VERIFICATION SUCCEEDED
+
+----------------------------------------
+VERIFICACION 2: SBOM ATTESTATION
+----------------------------------------
+
+Predicado:
+https://cyclonedx.org/bom
+
+Resultado:
+VERIFICATION SUCCEEDED
+
+----------------------------------------
+IDENTIDAD Y FIRMA
+----------------------------------------
+
+Workflow:
+.github/workflows/container-ci.yml
+
+Rama:
+main
+
+Emisor OIDC:
+https://token.actions.githubusercontent.com
+
+Firma:
+Sigstore
+
+----------------------------------------
+INTEGRIDAD DE LAS EVIDENCIAS
+----------------------------------------
+
+ec542b12f3c8e520258eaa78aed0e14d75aef760c25bfb171c7f24b98385bea6  docs/evidencias/fase-05/04-provenance-verification.json
+1717d817b0885bc031ead3a6bda40158f102e0cb63d1e9c448c0a57d31e7e5ce  docs/evidencias/fase-05/05-sbom-attestation-verification.json
