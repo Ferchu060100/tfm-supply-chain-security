@@ -120,6 +120,19 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
+      # ==========================================
+      # FIRMA CRIPTOGRAFICA DE IMAGEN CON COSIGN
+      # ==========================================
+
+      - name: Sign Docker image with Cosign (Keyless)
+        env:
+          IMAGE: ghcr.io/ferchu060100/tfm-supply-chain-security
+          DIGEST: ${{ steps.build.outputs.digest }}
+        run: |
+          set -euo pipefail
+
+          cosign sign --yes "${IMAGE}@${DIGEST}"
+
 
       # ==========================================
       # GENERACIÓN DE SBOM CON SYFT
