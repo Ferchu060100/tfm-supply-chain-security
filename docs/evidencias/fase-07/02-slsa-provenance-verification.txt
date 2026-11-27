@@ -1,0 +1,16 @@
+==========================================
+VERIFICACION SLSA PROVENANCE
+==========================================
+
+Resultado: VERIFICATION SUCCEEDED
+Repositorio: Ferchu060100/tfm-supply-chain-security
+Imagen: ghcr.io/ferchu060100/tfm-supply-chain-security
+Digest: sha256:906896b46b429b2566b207aebdc4e9999966af127eb096c0f3423d0a8908f485
+
+Predicate: https://slsa.dev/provenance/v1
+Subject: ghcr.io/ferchu060100/tfm-supply-chain-security
+SHA-256: 906896b46b429b2566b207aebdc4e9999966af127eb096c0f3423d0a8908f485
+
+==========================================
+JSON original: docs/evidencias/fase-07/02-slsa-provenance-verification.json
+==========================================

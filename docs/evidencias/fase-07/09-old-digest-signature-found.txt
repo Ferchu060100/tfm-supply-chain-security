@@ -1,0 +1,8 @@
+
+Verification for ghcr.io/ferchu060100/tfm-supply-chain-security@sha256:fb2d7a17bd84d69f8c2aa2dfc845f58e590378effd5da522025df864de41ce93 --
+The following checks were performed on each of these signatures:
+  - The cosign claims were validated
+  - Existence of the claims in the transparency log was verified offline
+  - The code-signing certificate was verified using trusted certificate authority certificates
+
+[{"critical":{"identity":{"docker-reference":"ghcr.io/ferchu060100/tfm-supply-chain-security@sha256:fb2d7a17bd84d69f8c2aa2dfc845f58e590378effd5da522025df864de41ce93"},"image":{"docker-manifest-digest":"sha256:fb2d7a17bd84d69f8c2aa2dfc845f58e590378effd5da522025df864de41ce93"},"type":"https://slsa.dev/provenance/v1"},"optional":{}},{"critical":{"identity":{"docker-reference":"ghcr.io/ferchu060100/tfm-supply-chain-security@sha256:fb2d7a17bd84d69f8c2aa2dfc845f58e590378effd5da522025df864de41ce93"},"image":{"docker-manifest-digest":"sha256:fb2d7a17bd84d69f8c2aa2dfc845f58e590378effd5da522025df864de41ce93"},"type":"https://cyclonedx.org/bom"},"optional":{}}]

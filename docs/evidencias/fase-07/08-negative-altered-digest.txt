@@ -1,0 +1,8 @@
+Error: no signatures found
+error during command execution: no signatures found
+
+======================================
+PRUEBA NEGATIVA COSIGN
+DIGEST ALTERADO RECHAZADO
+Exit code: 10
+======================================

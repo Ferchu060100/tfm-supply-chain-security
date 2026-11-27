@@ -1,0 +1,8 @@
+
+Error: no attestations found with predicate type: https://example.com/unauthorized-predicate
+
+======================================
+PRUEBA NEGATIVA DE PREDICADO
+PREDICADO NO AUTORIZADO RECHAZADO
+Exit code: 1
+======================================

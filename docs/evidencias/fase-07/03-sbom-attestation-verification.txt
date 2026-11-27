@@ -1,0 +1,19 @@
+==========================================
+VERIFICACION SBOM ATTESTATION - CYCLONEDX
+==========================================
+
+Resultado: VERIFICATION SUCCEEDED
+Exit code: 0
+Repositorio: Ferchu060100/tfm-supply-chain-security
+Imagen: ghcr.io/ferchu060100/tfm-supply-chain-security
+Predicate: https://cyclonedx.org/bom
+Atestaciones coincidentes en JSON: 1
+Subject: ghcr.io/ferchu060100/tfm-supply-chain-security
+SHA-256: 906896b46b429b2566b207aebdc4e9999966af127eb096c0f3423d0a8908f485
+
+Identidad: https://github.com/Ferchu060100/tfm-supply-chain-security/.github/workflows/container-ci.yml@refs/heads/main
+OIDC Issuer: https://token.actions.githubusercontent.com
+Origen: GHCR OCI Registry
+
+JSON original: docs/evidencias/fase-07/03-sbom-attestation-verification.json
+==========================================
