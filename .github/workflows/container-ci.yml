@@ -131,7 +131,12 @@ jobs:
         run: |
           set -euo pipefail
 
-          cosign sign --yes "${IMAGE}@${DIGEST}"
+          cosign sign \
+          --new-bundle-format=false \
+          --use-signing-config=false \
+          --yes \
+          "${IMAGE}@${DIGEST}"
+
 
 
       # ==========================================
