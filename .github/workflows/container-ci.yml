@@ -133,6 +133,7 @@ jobs:
 
           cosign sign \
           --new-bundle-format=false \
+          --use-signing-config=false \
           --yes \
           "${IMAGE}@${DIGEST}"
 
